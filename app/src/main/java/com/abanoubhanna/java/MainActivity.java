@@ -81,13 +81,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //if vs switch
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_basic) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_advanced) {
 
         } else if (id == R.id.nav_share) {
 
