@@ -1,6 +1,7 @@
 package com.abanoubhanna.java;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +45,23 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Resources res = getResources();
+        String[] titles = res.getStringArray(R.array.titles);
+
+        ListView lv =(ListView)findViewById(R.id.lv);
+        ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, titles);
+        lv.setAdapter(adapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
+                Intent intent = new Intent(MainActivity.this, Code.class);
+                intent.putExtra("snippet",i+"");
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -82,9 +104,7 @@ public class MainActivity extends AppCompatActivity
 
         //if vs switch
         if (id == R.id.nav_basic) {
-            Intent i = new Intent(this, Code.class);
-            startActivity(i);
-            finish();
+
         } else if (id == R.id.nav_advanced) {
 
         } else if (id == R.id.nav_share) {

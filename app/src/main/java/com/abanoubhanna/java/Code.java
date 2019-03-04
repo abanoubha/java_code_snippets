@@ -1,16 +1,20 @@
 package com.abanoubhanna.java;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 
 import io.github.kbiakov.codeview.CodeView;
 import io.github.kbiakov.codeview.adapters.Options;
 import io.github.kbiakov.codeview.highlight.ColorTheme;
 
 public class Code extends AppCompatActivity {
+
+    static String codeNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +23,9 @@ public class Code extends AppCompatActivity {
 
         final CodeView codeView = (CodeView) findViewById(R.id.code_view);
 
-        String script = getCode("code1");
+        codeNo = Objects.requireNonNull(getIntent().getExtras()).getString("snippet");
+
+        String script = getCode("code" + codeNo);
 
         codeView.setOptions(Options.Default.get(this)
                 .withLanguage("java")
@@ -41,5 +47,13 @@ public class Code extends AppCompatActivity {
             // Handle exceptions here
         }
         return tContents;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent back = new Intent(Code.this,MainActivity.class);
+        startActivity(back);
+        finish();
     }
 }
