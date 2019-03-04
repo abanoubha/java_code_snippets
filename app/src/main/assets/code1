@@ -1,0 +1,28 @@
+package com.abanoubhanna.java;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import io.github.kbiakov.codeview.CodeView;
+import io.github.kbiakov.codeview.adapters.Options;
+import io.github.kbiakov.codeview.classifier.CodeProcessor;
+import io.github.kbiakov.codeview.highlight.ColorTheme;
+
+public class Code extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_code_view);
+
+        final CodeView codeView = (CodeView) findViewById(R.id.code_view);
+
+        codeView.setOptions(Options.Default.get(this)
+                .withLanguage("java")
+                .withCode(getAssets().open(code1))
+                .withTheme(ColorTheme.MONOKAI));
+
+        CodeProcessor.init(this);
+
+    }
+}

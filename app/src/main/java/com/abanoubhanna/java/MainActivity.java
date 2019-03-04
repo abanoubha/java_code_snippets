@@ -82,7 +82,9 @@ public class MainActivity extends AppCompatActivity
 
         //if vs switch
         if (id == R.id.nav_basic) {
-
+            Intent i = new Intent(this, Code.class);
+            startActivity(i);
+            finish();
         } else if (id == R.id.nav_advanced) {
 
         } else if (id == R.id.nav_share) {
