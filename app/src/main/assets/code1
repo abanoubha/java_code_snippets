@@ -1,28 +1,41 @@
-package com.abanoubhanna.java;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import io.github.kbiakov.codeview.CodeView;
-import io.github.kbiakov.codeview.adapters.Options;
-import io.github.kbiakov.codeview.classifier.CodeProcessor;
-import io.github.kbiakov.codeview.highlight.ColorTheme;
+public class MainActivity extends AppCompatActivity {
 
-public class Code extends AppCompatActivity {
+    EditText editText;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_code_view);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
-        final CodeView codeView = (CodeView) findViewById(R.id.code_view);
+            editText = (EditText) findViewById(R.id.editText);
 
-        codeView.setOptions(Options.Default.get(this)
-                .withLanguage("java")
-                .withCode(getAssets().open(code1))
-                .withTheme(ColorTheme.MONOKAI));
+            textView = (TextView) findViewById(R.id.textView);
 
-        CodeProcessor.init(this);
+            editText.addTextChangedListener(new TextWatcher() {
 
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            String name = editText.getText().toString();
+            textView.setText(\"Hi \"+name);
+            }
+       });
     }
 }

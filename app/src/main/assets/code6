@@ -1,0 +1,46 @@
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    CheckBox checkBox1, checkBox2, checkBox3;
+    Button submitButton;
+    TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
+        checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
+        checkBox3 = (CheckBox) findViewById(R.id.checkBox3);
+
+        submitButton = (Button) findViewById(R.id.submitButton);
+        textView = (TextView) findViewById(R.id.textView);
+        }
+
+    public void onClick(View view){
+        if (checkBox1.isChecked() == true && checkBox2.isChecked() == true && checkBox3.isChecked() == true){
+            textView.setText(\"You like all fruits !\");
+        } else if (checkBox1.isChecked() == true && checkBox2.isChecked() == true){
+            textView.setText(\"You like Banana and Apple !\");
+        } else if (checkBox1.isChecked() == true && checkBox3.isChecked() == true){
+            textView.setText(\"You like Banana and Orange !\");
+        } else if (checkBox2.isChecked() == true && checkBox3.isChecked() == true){
+            textView.setText(\"You like Apple and Orange !\");
+        } else if(checkBox1.isChecked() == true){
+            textView.setText(\"You like Banana !\");
+        } else if (checkBox2.isChecked() == true){
+            textView.setText(\"You like Apple !\");
+        } else if (checkBox3.isChecked() == true){
+            textView.setText(\"You like Orange !\");
+        } else {
+            textView.setText(\"You don't like these fruits?\");
+        }
+    }
+}

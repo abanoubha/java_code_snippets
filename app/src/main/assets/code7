@@ -1,25 +1,27 @@
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    ImageView imageView;
+    Switch switchButton;
     TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageView = (ImageView) findViewById(R.id.image);
+
+        switchButton = (Switch) findViewById(R.id.switchButton);
         textView = (TextView) findViewById(R.id.textView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            textView.setText(\"Android says Hiii :)\");
-            }
-        });
+    }
+
+    public void onSwitchClick(View view){
+        if(switchButton.isChecked()){
+            textView.setText(\"Switch is ON\");
+        }else{
+            textView.setText(\"Switch is OFF\");
+        }
     }
 }

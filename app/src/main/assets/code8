@@ -1,25 +1,28 @@
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imageView;
+    ToggleButton toggleButton;
     TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageView = (ImageView) findViewById(R.id.image);
+
+        toggleButton = (ToggleButton) findViewById(R.id.toggleButton);
         textView = (TextView) findViewById(R.id.textView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            textView.setText(\"Android says Hiii :)\");
-            }
-        });
+    }
+
+    public void onToggleClick(View view){
+        if(toggleButton.isChecked()){
+            textView.setText(\"Toggle is ON\");
+        }else{
+            textView.setText(\"Toggle is OFF\");
+        }
     }
 }

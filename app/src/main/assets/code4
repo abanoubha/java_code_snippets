@@ -1,1 +1,24 @@
-code 4 snippet
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    AutoCompleteTextView acTextView;
+    TextView textView;
+    String [] inputs = {\"Pakistan\", \"Iran\", \"China\", \"India\", \"Thailand\", \"U.A.E\", \"Yemen\", \"Palestine\", \"America\", \"Australia\", \"Turkey\", \"England\", \"France\", \"Greece\"};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        acTextView = (AutoCompleteTextView) findViewById(R.id.acTextView);
+        textView = (TextView) findViewById(R.id.textview);
+        textView.setText(\"Text Inputs:\\nPakistan, Iran, China, India, Thailand, U.A.E, Yemen, Palestine, America, Australia, Turkey, England, France, Greece\");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, inputs);
+        acTextView.setAdapter(adapter);
+    }
+}

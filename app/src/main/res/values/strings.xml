@@ -7,9 +7,64 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string-array name="titles">
-        <item>Android 1</item>
-        <item>Android 2</item>
-        <item>Android 3</item>
-        <item>Android 4</item>
+        <item>1. TextView</item>
+        <item>2. EditText</item>
+        <item>3. ImageView</item>
+        <item>4. Button</item>
+        <item>5. AutoComplete TextView</item>
+        <item>6. RadioButton and RadioGroup</item>
+        <item>7. CheckBox</item>
+        <item>8. Switch</item>
+        <item>9. ToggleButton</item>
+        <item>10. RatingBar</item>
+        <item>11. SeekBar</item>
+        <item>12. ProgressBar</item>
+        <item>13. Spinner</item>
+        <item>14. TimePicker</item>
+        <item>15. DatePicker</item>
+        <item>16. Simple and Custom Toast</item>
+        <item>17. Alert Dialog</item>
+        <item>18. Options Menu</item>
+        <item>19. Context Menu</item>
+        <item>20. PopUp Menu</item>
+        <item>21. Simple Intent</item>
+        <item>22. Sending Data To Other Activities</item>
+        <item>23. Start Activity For Result Intent</item>
+        <item>24. Implement and Change Fragments</item>
+        <item>25. TextSwitcher</item>
+        <item>26. ImageSwitcher</item>
+        <item>27. AdapterViewFlipper</item>
+        <item>28. StackView</item>
+        <item>29. Animations</item>
+        <item>30. ListView</item>
+        <item>31. Custom ListView</item>
+        <item>32. Expandable ListView</item>
+        <item>33. GridView</item>
+        <item>34. WebView</item>
+        <item>35. SearchView</item>
+        <item>36. TabHost</item>
+        <item>37. ViewPager</item>
+        <item>38. FloatingActionButton</item>
+        <item>39. TextInputEditText</item>
+        <item>40. BottomNavigation</item>
+        <item>41. BottomSheets</item>
+        <item>42. SnackBar</item>
+        <item>43. NavigationDrawer</item>
+        <item>44. RecyclerView and CardView</item>
+        <item>45. Different Types Of Notifications</item>
+        <item>46. Shared Preferences</item>
+        <item>47. Internal Storage</item>
+        <item>48. External Storage</item>
+        <item>49. SQLite Database</item>
+        <item>50. Using Android Download Manager</item>
+        <item>51. QR Code Scanner App</item>
+        <item>52. Convert Speech to Text</item>
+        <item>53. Convert Text to Speech</item>
+        <item>54. Bitcoin Price Index App using JSON</item>
+        <item>55. Firebase User Authentication App</item>
+        <item>56. Youtube Player App</item>
+        <item>57. Convert Website to App</item>
+        <item>58. PDF Creator App</item>
+        <item>59. Code View</item>
     </string-array>
 </resources>
