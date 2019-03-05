@@ -22,13 +22,13 @@ public class MainActivity extends AppCompatActivity {
         public void onSubmit(View view){
             float ratingValue = ratingBar.getRating();
             if(ratingValue < 2){
-                textView.setText(\"Rating: \"+ratingValue+\"\\nIs it that worse?\");
+                textView.setText("Rating: "+ratingValue+"\\nIs it that worse?");
              }else if(ratingValue <= 3 && ratingValue >= 2){
-                textView.setText(\"Rating: \"+ratingValue+\"\\nWe will try to be better !\");
+                textView.setText("Rating: "+ratingValue+"\\nWe will try to be better !");
              }else if(ratingValue > 3 && ratingValue <= 4){
-                textView.setText(\"Rating: \"+ratingValue+\"\\nThat means you are having a good time here :)\");
+                textView.setText("Rating: "+ratingValue+"\\nThat means you are having a good time here :)");
              }else if(ratingValue > 4){
-                textView.setText(\"Rating: \"+ratingValue+\"\\nWow! We will keep up the good work ;)\");
+                textView.setText("Rating: "+ratingValue+"\\nWow! We will keep up the good work ;)");
              }
         }
     }

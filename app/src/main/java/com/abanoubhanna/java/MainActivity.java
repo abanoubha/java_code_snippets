@@ -103,14 +103,21 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //if vs switch
-        if (id == R.id.nav_basic) {
-
-        } else if (id == R.id.nav_advanced) {
-
+        if (id == R.id.nav_web) {
+            openUrl("https://play.google.com/store/apps/details?id=com.abanoubhanna.web");
+        } else if (id == R.id.nav_cheatsheet) {
+            openUrl("https://play.google.com/store/apps/details?id=com.abanoubhanna.cheatsheets");
+        }else if (id == R.id.nav_ocr) {
+            openUrl("https://play.google.com/store/apps/details?id=com.abanoubhanna.ocrit");
+        }else if (id == R.id.nav_blog){
+            openUrl("https://play.google.com/store/apps/details?id=com.abanoubhanna.blog");
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.abanoubhanna.java");
+            startActivity(Intent.createChooser(sharingIntent, "Share via"));
+        } else if (id == R.id.nav_github) {
+            openUrl("https://github.com/DevAbanoub/java_code_snippets");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

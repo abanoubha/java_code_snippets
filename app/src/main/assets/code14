@@ -1,1 +1,32 @@
-import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.widget.DatePicker;\nimport android.widget.TextView;\n\nimport java.util.Calendar;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    DatePicker datePicker;\n    TextView textView;\n    \n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        datePicker = (DatePicker) findViewById(R.id.datePicker);\n        textView = (TextView) findViewById(R.id.textView);\n\n        Calendar calendar = Calendar.getInstance();\n        datePicker.init(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), new DatePicker.OnDateChangedListener() {\n            @Override\n            public void onDateChanged(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {\n                textView.setText(dayOfMonth+\" - \"+monthOfYear+\" - \"+year);\n            }\n        });\n\n    }\n\n}\n
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.DatePicker;
+import android.widget.TextView;
+
+import java.util.Calendar;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    DatePicker datePicker;
+    TextView textView;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        datePicker = (DatePicker) findViewById(R.id.datePicker);
+        textView = (TextView) findViewById(R.id.textView);
+
+        Calendar calendar = Calendar.getInstance();
+        datePicker.init(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
+                textView.setText(dayOfMonth+" - "+monthOfYear+" - "+year);
+            }
+        });
+
+    }
+
+}

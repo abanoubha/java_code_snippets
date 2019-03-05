@@ -6,6 +6,10 @@
     <string name="nav_header_subtitle">Java Code Snippets for Android</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="java_code">Java Code</string>
+    <string name="xml">XML</string>
+    <string name="copy_code">Copy Code</string>
+    <string name="copy_xml">Copy XML</string>
     <string-array name="titles">
         <item>1. TextView</item>
         <item>2. EditText</item>
@@ -31,7 +35,8 @@
         <item>22. Sending Data To Other Activities</item>
         <item>23. Start Activity For Result Intent</item>
         <item>24. Implement and Change Fragments</item>
-        <item>25. TextSwitcher</item>
+
+<!--        <item>25. TextSwitcher</item>
         <item>26. ImageSwitcher</item>
         <item>27. AdapterViewFlipper</item>
         <item>28. StackView</item>
@@ -65,6 +70,6 @@
         <item>56. Youtube Player App</item>
         <item>57. Convert Website to App</item>
         <item>58. PDF Creator App</item>
-        <item>59. Code View</item>
+        <item>59. Code View</item>-->
     </string-array>
 </resources>

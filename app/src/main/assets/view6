@@ -1,1 +1,57 @@
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:padding=\"16dp\"\n    android:background=\"@color/white\"\n    tools:context=\"com.hussainlabs.myapplication.MainActivity\"\n    android:orientation=\"vertical\">\n\n    <TextView\n        android:id=\"@+id/textView\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginTop=\"10dp\"\n        android:layout_marginBottom=\"50dp\"\n        android:textStyle=\"bold\"\n        android:textSize=\"25sp\"\n        android:textColor=\"@color/black\"\n        android:layout_gravity=\"center_horizontal\"/>\n\n    <TextView\n        android:id=\"@+id/textView1\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:textStyle=\"bold\"\n        android:layout_marginBottom=\"10dp\"\n        android:textColor=\"@color/black\"\n        android:text=\"Which fruits do you like?\" />\n\n    <CheckBox\n        android:id=\"@+id/checkBox1\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Banana\"\n        />\n    <CheckBox\n        android:id=\"@+id/checkBox2\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Apple\"\n        />\n    <CheckBox\n        android:id=\"@+id/checkBox3\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Orange\"\n        />\n    <Button\n        android:id=\"@+id/submitButton\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Submit\"\n        android:onClick=\"onClick\"/>\n\n</LinearLayout>\n
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context="com.abanoubhanna.myapp.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:text="Which fruits do you like?" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banana"
+        />
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apple"
+        />
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orange"
+        />
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:onClick="onClick"/>
+
+</LinearLayout>

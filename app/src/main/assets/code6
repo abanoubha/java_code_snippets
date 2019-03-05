@@ -26,21 +26,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view){
         if (checkBox1.isChecked() == true && checkBox2.isChecked() == true && checkBox3.isChecked() == true){
-            textView.setText(\"You like all fruits !\");
+            textView.setText("You like all fruits !");
         } else if (checkBox1.isChecked() == true && checkBox2.isChecked() == true){
-            textView.setText(\"You like Banana and Apple !\");
+            textView.setText("You like Banana and Apple !");
         } else if (checkBox1.isChecked() == true && checkBox3.isChecked() == true){
-            textView.setText(\"You like Banana and Orange !\");
+            textView.setText("You like Banana and Orange !");
         } else if (checkBox2.isChecked() == true && checkBox3.isChecked() == true){
-            textView.setText(\"You like Apple and Orange !\");
+            textView.setText("You like Apple and Orange !");
         } else if(checkBox1.isChecked() == true){
-            textView.setText(\"You like Banana !\");
+            textView.setText("You like Banana !");
         } else if (checkBox2.isChecked() == true){
-            textView.setText(\"You like Apple !\");
+            textView.setText("You like Apple !");
         } else if (checkBox3.isChecked() == true){
-            textView.setText(\"You like Orange !\");
+            textView.setText("You like Orange !");
         } else {
-            textView.setText(\"You don't like these fruits?\");
+            textView.setText("You don't like these fruits?");
         }
     }
 }

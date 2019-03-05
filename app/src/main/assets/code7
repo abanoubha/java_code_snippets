@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSwitchClick(View view){
         if(switchButton.isChecked()){
-            textView.setText(\"Switch is ON\");
+            textView.setText("Switch is ON");
         }else{
-            textView.setText(\"Switch is OFF\");
+            textView.setText("Switch is OFF");
         }
     }
 }

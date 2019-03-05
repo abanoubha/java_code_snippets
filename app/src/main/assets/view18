@@ -1,3 +1,47 @@
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:id=\"@+id/relLayout\"\n    android:padding=\"16dp\"\n    android:background=\"@color/white\"\n    >\n\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginTop=\"20dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"Go to Activity 2\"\n        android:onClick=\"onClick\"\n        />\n\n</RelativeLayout>\n
+<!-- layout 1 -->
 
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:id=\"@+id/relLayout\"\n    android:padding=\"16dp\"\n    android:background=\"@color/colorAccent\"\n    >\n\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginTop=\"20dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"Go to Activity 1\"\n        android:onClick=\"onClick\"\n        />\n\n</RelativeLayout>\n
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relLayout"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Go to Activity 2"
+        android:onClick="onClick"/>
+
+</RelativeLayout>
+
+<!-- layout 2 -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relLayout"
+    android:padding="16dp"
+    android:background="@color/colorAccent">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Go to Activity 1"
+        android:onClick="onClick"/>
+
+</RelativeLayout>

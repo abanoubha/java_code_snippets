@@ -1,1 +1,30 @@
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:padding=\"16dp\"\n    android:background=\"@color/white\"\n    tools:context=\"com.hussainlabs.myapplication.MainActivity\">\n\n    <SeekBar\n        android:id=\"@+id/seekBar\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_centerVertical=\"true\"\n        />\n\n    <TextView\n        android:id=\"@+id/textView\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginBottom=\"100dp\"\n        android:layout_centerVertical=\"true\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_above=\"@+id/seekBar\"\n        android:textStyle=\"bold\"\n        android:textColor=\"#40C4FF\"/>\n\n</RelativeLayout>\n
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context="com.abanoubhanna.myapp.MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/seekBar"
+        android:textStyle="bold"
+        android:textColor="#40C4FF"/>
+
+</RelativeLayout>

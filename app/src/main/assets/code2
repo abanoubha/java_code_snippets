@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            textView.setText(\"Android says Hiii :)\");
+            textView.setText("Android says Hi :)");
             }
         });
     }

@@ -1,1 +1,54 @@
-import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.ProgressBar;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    ProgressBar progressBar, progressBarHorizontal;\n    Button button1, button2;\n    int progress = 0;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        //init the progressbar\n        progressBar = (ProgressBar) findViewById(R.id.progressBar);\n        progressBarHorizontal = (ProgressBar) findViewById(R.id.progressBarHorizontal);\n\n        button1 = (Button) findViewById(R.id.button1);\n        button2 = (Button) findViewById(R.id.button2);\n\n        //set visibility gone so it doesn't show on start\n        progressBar.setVisibility(View.GONE);\n    }\n\n    public void progressBarClick(View v){\n        //progressbar visible when button clicked\n        progressBar.setVisibility(View.VISIBLE);\n\n    }\n\n    public void progressBarHorizontalClick(View v){\n        //method to set value of progress and pass starting value = 0\n        setProgressValue(progress);\n    }\n\n    private void setProgressValue(final int progress) {\n        progressBarHorizontal.setProgress(progress);\n        //thread is used to give delay and set value accordingly\n        Thread thread = new Thread(new Runnable() {\n            @Override\n            public void run() {\n                try{\n                    Thread.sleep(1000);\n                } catch(InterruptedException e){\n                    e.printStackTrace();\n                }\n                setProgressValue(progress + 10);\n            }\n        });\n        thread.start();\n    }\n}\n
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+
+public class MainActivity extends AppCompatActivity {
+    ProgressBar progressBar, progressBarHorizontal;
+    Button button1, button2;
+    int progress = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //init the progressbar
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBarHorizontal = (ProgressBar) findViewById(R.id.progressBarHorizontal);
+
+        button1 = (Button) findViewById(R.id.button1);
+        button2 = (Button) findViewById(R.id.button2);
+
+        //set visibility gone so it doesn't show on start
+        progressBar.setVisibility(View.GONE);
+    }
+
+    public void progressBarClick(View v){
+        //progressbar visible when button clicked
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    public void progressBarHorizontalClick(View v){
+        //method to set value of progress and pass starting value = 0
+        setProgressValue(progress);
+    }
+
+    private void setProgressValue(final int progress) {
+        progressBarHorizontal.setProgress(progress);
+        //thread is used to give delay and set value accordingly
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(1000);
+                } catch(InterruptedException e){
+                    e.printStackTrace();
+                }
+                setProgressValue(progress + 10);
+            }
+        });
+        thread.start();
+    }
+}

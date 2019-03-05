@@ -1,15 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Code"
+    android:scrollbars="vertical"
     android:background="@color/colorPrimaryDark">
+
 
     <io.github.kbiakov.codeview.CodeView
         android:id="@+id/code_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="600dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical" />
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/code_view"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal">
+
+        <Button
+            android:id="@+id/copyCode"
+            style="buttonBarButtonStyle"
+            android:layout_width="104dp"
+            android:layout_height="60dp"
+            android:onClick="copyCode"
+            android:text="@string/copy_code"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/copyXml"
+            style="buttonBarButtonStyle"
+            android:layout_width="104dp"
+            android:layout_height="60dp"
+            android:onClick="copyXml"
+            android:text="@string/copy_xml"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/javac"
+            style="buttonBarButtonStyle"
+            android:layout_width="104dp"
+            android:layout_height="60dp"
+            android:onClick="showCode"
+            android:text="@string/java_code"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/xmlc"
+            style="buttonBarButtonStyle"
+            android:layout_width="104dp"
+            android:layout_height="60dp"
+            android:onClick="showXml"
+            android:text="@string/xml"
+            android:textSize="12sp" />
+
+    </LinearLayout>
 </RelativeLayout>

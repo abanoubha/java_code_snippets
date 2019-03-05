@@ -1,1 +1,57 @@
-import android.graphics.Color;\nimport android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.view.ContextMenu;\nimport android.view.MenuItem;\nimport android.view.View;\nimport android.widget.RelativeLayout;\nimport android.widget.TextView;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    TextView textView;\n    RelativeLayout relativeLayout;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        textView = (TextView) findViewById(R.id.textView);\n        relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);\n\n        //here you have to register a view for context menu\n        //you can register any view like listview, image view, textview, button etc\n        registerForContextMenu(textView);\n\n    }\n\n    @Override\n    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {\n        super.onCreateContextMenu(menu, v, menuInfo);\n        //you can set menu header with title icon etc\n        menu.setHeaderTitle(\"Choose a color\");\n        //add menu items\n        menu.add(0,v.getId(),0,\"Yellow\");\n        menu.add(0,v.getId(),0,\"Gray\");\n        menu.add(0,v.getId(),0,\"Cyan\");\n    }\n\n    //menu item select listener\n    @Override\n    public boolean onContextItemSelected(MenuItem item) {\n\n        if(item.getTitle() == \"Yellow\"){\n            relativeLayout.setBackgroundColor(Color.YELLOW);\n        }\n        else if (item.getTitle() == \"Gray\"){\n            relativeLayout.setBackgroundColor(Color.GRAY);\n        }\n        else if (item.getTitle() == \"Cyan\"){\n            relativeLayout.setBackgroundColor(Color.CYAN);\n        }\n\n        return true;\n    }\n}\n
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    TextView textView;
+    RelativeLayout relativeLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textView = (TextView) findViewById(R.id.textView);
+        relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);
+
+        //here you have to register a view for context menu
+        //you can register any view like listview, image view, textview, button etc
+        registerForContextMenu(textView);
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        //you can set menu header with title icon etc
+        menu.setHeaderTitle("Choose a color");
+        //add menu items
+        menu.add(0,v.getId(),0,"Yellow");
+        menu.add(0,v.getId(),0,"Gray");
+        menu.add(0,v.getId(),0,"Cyan");
+    }
+
+    //menu item select listener
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        if(item.getTitle() == "Yellow"){
+            relativeLayout.setBackgroundColor(Color.YELLOW);
+        }
+        else if (item.getTitle() == "Gray"){
+            relativeLayout.setBackgroundColor(Color.GRAY);
+        }
+        else if (item.getTitle() == "Cyan"){
+            relativeLayout.setBackgroundColor(Color.CYAN);
+        }
+
+        return true;
+    }
+}

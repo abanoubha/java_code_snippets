@@ -1,1 +1,30 @@
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:padding=\"16dp\"\n    android:background=\"@color/white\"\n    tools:context=\"com.hussainlabs.myapplication.MainActivity\">\n\n    <AutoCompleteTextView\n        android:id=\"@+id/acTextView\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_marginTop=\"10dp\"\n        android:completionThreshold=\"1\"\n        />\n\n    <TextView\n        android:id=\"@+id/textview\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_below=\"@id/acTextView\"\n        android:layout_marginTop=\"20dp\"\n        android:textColor=\"@color/black\"\n        />\n\n</RelativeLayout>\n
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context="com.abanoubhanna.myapp.MainActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/acTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:completionThreshold="1"
+        />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/acTextView"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>

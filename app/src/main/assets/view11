@@ -1,1 +1,50 @@
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:padding=\"16dp\"\n    android:background=\"@color/white\"\n    tools:context=\"com.hussainlabs.myapplication.MainActivity\">\n\n\n    <ProgressBar\n        android:id=\"@+id/progressBar\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\" />\n\n    <Button\n        android:id=\"@+id/button1\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_below=\"@+id/progressBar\"\n        android:text=\"Click Me\"\n        android:layout_marginTop=\"10dp\"\n        android:onClick=\"progressBarClick\"/>\n\n    <ProgressBar\n        android:id=\"@+id/progressBarHorizontal\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_below=\"@id/button1\"\n        android:layout_marginTop=\"50dp\"\n        android:max=\"100\"\n        android:progress=\"0\"\n        style=\"@style/Widget.AppCompat.ProgressBar.Horizontal\"/>\n\n    <Button\n        android:id=\"@+id/button2\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_below=\"@+id/progressBarHorizontal\"\n        android:text=\"Click Me\"\n        android:layout_marginTop=\"10dp\"\n        android:onClick=\"progressBarHorizontalClick\"/>\n\n</RelativeLayout>\n
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context="com.abanoubhanna.myapp.MainActivity">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBar"
+        android:text="Click Me"
+        android:layout_marginTop="10dp"
+        android:onClick="progressBarClick"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button1"
+        android:layout_marginTop="50dp"
+        android:max="100"
+        android:progress="0"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBarHorizontal"
+        android:text="Click Me"
+        android:layout_marginTop="10dp"
+        android:onClick="progressBarHorizontalClick"/>
+
+</RelativeLayout>

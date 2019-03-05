@@ -1,1 +1,35 @@
-import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.widget.SeekBar;\nimport android.widget.TextView;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    SeekBar seekBar;\n    TextView textView;\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        seekBar = (SeekBar) findViewById(R.id.seekBar);\n\n        textView = (TextView) findViewById(R.id.textView);\n\n        textView.setText(\"I love Technology.\");\n\n        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {\n            @Override\n            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {\n                textView.setTextSize(progress);\n            }\n\n            @Override\n            public void onStartTrackingTouch(SeekBar seekBar) {\n\n            }\n\n            @Override\n            public void onStopTrackingTouch(SeekBar seekBar) {\n\n            }\n        });\n\n    }\n\n}\n
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    SeekBar seekBar;
+    TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        textView = (TextView) findViewById(R.id.textView);
+        textView.setText("I love Technology.");
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textView.setTextSize(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+    }
+}

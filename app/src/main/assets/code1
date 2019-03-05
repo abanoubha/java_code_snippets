@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
             String name = editText.getText().toString();
-            textView.setText(\"Hi \"+name);
+            textView.setText("Hi "+name);
             }
        });
     }

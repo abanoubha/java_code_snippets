@@ -1,1 +1,27 @@
-import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.widget.TextView;\nimport android.widget.TimePicker;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    TimePicker timePicker;\n    TextView textView;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        timePicker = (TimePicker) findViewById(R.id.timePicker);\n        textView = (TextView) findViewById(R.id.textView);\n\n        timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {\n            @Override\n            public void onTimeChanged(TimePicker timePicker, int hourOfDay, int minute) {\n                textView.setText(hourOfDay+\" - \"+minute);\n            }\n        });\n    }\n}\n
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.TimePicker;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    TimePicker timePicker;
+    TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        timePicker = (TimePicker) findViewById(R.id.timePicker);
+        textView = (TextView) findViewById(R.id.textView);
+
+        timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker timePicker, int hourOfDay, int minute) {
+                textView.setText(hourOfDay+" - "+minute);
+            }
+        });
+    }
+}

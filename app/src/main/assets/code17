@@ -1,1 +1,50 @@
-import android.graphics.Color;\nimport android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.view.Menu;\nimport android.view.MenuItem;\nimport android.widget.RelativeLayout;\nimport android.widget.TextView;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    TextView textView;\n    RelativeLayout relativeLayout;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        textView = (TextView) findViewById(R.id.textView);\n        relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);\n\n    }\n\n    @Override\n    public boolean onCreateOptionsMenu(Menu menu) {\n        //inflate the menu resource file in your activity\n        getMenuInflater().inflate(R.menu.menu_main, menu);\n        return true;\n    }\n\n    @Override\n    public boolean onOptionsItemSelected(MenuItem item) {\n        //code for item select event handling\n        switch(item.getItemId()){\n            case R.id.profile:\n                textView.setText(\"Profile\");\n                relativeLayout.setBackgroundColor(Color.CYAN);\n                break;\n            case R.id.settings:\n                textView.setText(\"Settings\");\n                relativeLayout.setBackgroundColor(Color.MAGENTA);\n                break;\n            case R.id.signout:\n                finish();\n                break;\n        }\n        return super.onOptionsItemSelected(item);\n    }\n}\n
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    TextView textView;
+    RelativeLayout relativeLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textView = (TextView) findViewById(R.id.textView);
+        relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //inflate the menu resource file in your activity
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //code for item select event handling
+        switch(item.getItemId()){
+            case R.id.profile:
+                textView.setText("Profile");
+                relativeLayout.setBackgroundColor(Color.CYAN);
+                break;
+            case R.id.settings:
+                textView.setText("Settings");
+                relativeLayout.setBackgroundColor(Color.MAGENTA);
+                break;
+            case R.id.signout:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}

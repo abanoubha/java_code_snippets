@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onToggleClick(View view){
         if(toggleButton.isChecked()){
-            textView.setText(\"Toggle is ON\");
+            textView.setText("Toggle is ON");
         }else{
-            textView.setText(\"Toggle is OFF\");
+            textView.setText("Toggle is OFF");
         }
     }
 }

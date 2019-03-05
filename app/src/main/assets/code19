@@ -1,1 +1,52 @@
-import android.graphics.Color;\nimport android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.view.MenuItem;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.PopupMenu;\nimport android.widget.RelativeLayout;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    Button button;\n    RelativeLayout relativeLayout;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        button = (Button) findViewById(R.id.button);\n        relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);\n\n    }\n\n    public void changeBackground(View view) {\n        //init the menu and pass parameters: context and view to be registered for menu\n        PopupMenu popupMenu = new PopupMenu(MainActivity.this, button);\n        //inflate the menu\n        popupMenu.getMenuInflater().inflate(R.menu.menu_main, popupMenu.getMenu());\n        //menu item click listener\n        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {\n            @Override\n            public boolean onMenuItemClick(MenuItem item) {\n                switch (item.getItemId()) {\n                    case R.id.white:\n                        relativeLayout.setBackgroundColor(Color.WHITE);\n                        break;\n                    case R.id.blue:\n                        relativeLayout.setBackgroundColor(Color.BLUE);\n                        break;\n                    case R.id.yellow:\n                        relativeLayout.setBackgroundColor(Color.YELLOW);\n                        break;\n                }\n                return true;\n            }\n        });\n        //we have created, initialized and inflated the menu now show it\n        popupMenu.show();\n    }\n}\n
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    Button button;
+    RelativeLayout relativeLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        button = (Button) findViewById(R.id.button);
+        relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);
+
+    }
+
+    public void changeBackground(View view) {
+        //init the menu and pass parameters: context and view to be registered for menu
+        PopupMenu popupMenu = new PopupMenu(MainActivity.this, button);
+        //inflate the menu
+        popupMenu.getMenuInflater().inflate(R.menu.menu_main, popupMenu.getMenu());
+        //menu item click listener
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.white:
+                        relativeLayout.setBackgroundColor(Color.WHITE);
+                        break;
+                    case R.id.blue:
+                        relativeLayout.setBackgroundColor(Color.BLUE);
+                        break;
+                    case R.id.yellow:
+                        relativeLayout.setBackgroundColor(Color.YELLOW);
+                        break;
+                }
+                return true;
+            }
+        });
+        //we have created, initialized and inflated the menu now show it
+        popupMenu.show();
+    }
+}

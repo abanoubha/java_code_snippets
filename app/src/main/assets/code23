@@ -1,4 +1,98 @@
-import android.support.v4.app.Fragment;\nimport android.support.v4.app.FragmentManager;\nimport android.support.v4.app.FragmentTransaction;\nimport android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.TextView;\n\n\npublic class MainActivity extends AppCompatActivity {\n\n    Fragment fragment = null;\n    Button button1, button2;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        button1 = (Button) findViewById(R.id.button1);\n        button2 = (Button) findViewById(R.id.button2);\n\n    }\n\n    public void onClick(View view) {\n        switch(view.getId()){\n            case R.id.button1:\n                fragment = new FragmentOne();\n                loadFragment(fragment);\n                break;\n            case R.id.button2:\n                fragment = new FragmentTwo();\n                loadFragment(fragment);\n                break;\n\n        }\n    }\n\n    private void loadFragment(Fragment fragment) {\n        FragmentManager manager = getSupportFragmentManager();\n        FragmentTransaction transaction = manager.beginTransaction();\n        transaction.replace(R.id.fragment, fragment);\n        transaction.commit();\n    }\n\n}\n
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
-import android.os.Bundle;\nimport android.support.annotation.Nullable;\nimport android.support.v4.app.Fragment;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.TextView;\n\n\n\npublic class FragmentOne extends Fragment {\n\n    @Nullable\n    @Override\n    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\n        View view = inflater.inflate(R.layout.fragmentone , container, false);\n\n        TextView text = (TextView) view.findViewById(R.id.textView);\n\n        text.setText(\"Fragment One\");\n\n        return view;\n    }\n}\n";
-        this.s = "import android.os.Bundle;\nimport android.support.annotation.Nullable;\nimport android.support.v4.app.Fragment;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.TextView;\n\n\npublic class FragmentTwo extends Fragment {\n\n    @Nullable\n    @Override\n    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\n        View view = inflater.inflate(R.layout.fragmenttwo , container, false);\n\n        TextView text = (TextView) view.findViewById(R.id.textView);\n\n        text.setText(\"Fragment Two\");\n\n        return view;\n    }\n}\n
+
+public class MainActivity extends AppCompatActivity {
+
+    Fragment fragment = null;
+    Button button1, button2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        button1 = (Button) findViewById(R.id.button1);
+        button2 = (Button) findViewById(R.id.button2);
+
+    }
+
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.button1:
+                fragment = new FragmentOne();
+                loadFragment(fragment);
+                break;
+            case R.id.button2:
+                fragment = new FragmentTwo();
+                loadFragment(fragment);
+                break;
+
+        }
+    }
+
+    private void loadFragment(Fragment fragment) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.fragment, fragment);
+        transaction.commit();
+    }
+
+}
+
+
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+
+
+public class FragmentOne extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragmentone , container, false);
+
+        TextView text = (TextView) view.findViewById(R.id.textView);
+
+        text.setText("Fragment One");
+
+        return view;
+    }
+}
+";
+        this.s = "import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+
+public class FragmentTwo extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragmenttwo , container, false);
+
+        TextView text = (TextView) view.findViewById(R.id.textView);
+
+        text.setText("Fragment Two");
+
+        return view;
+    }
+}
+

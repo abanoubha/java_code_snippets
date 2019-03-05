@@ -1,3 +1,35 @@
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<menu xmlns:android=\"http://schemas.android.com/apk/res/android\">\n\n    <item android:id=\"@+id/white\" android:title=\"White\" />\n    <item android:id=\"@+id/blue\" android:title=\"Blue\" />\n    <item android:id=\"@+id/yellow\" android:title=\"Yellow\" />\n\n</menu>\n
+<!-- Menu -->
 
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:id=\"@+id/relLayout\"\n    android:padding=\"16dp\"\n    android:background=\"@color/white\"\n    tools:context=\"com.hussainlabs.myapplication.MainActivity\">\n\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginTop=\"20dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"Background Color\"\n        android:onClick=\"changeBackground\"\n        />\n\n</RelativeLayout>\n
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/white" android:title="White" />
+    <item android:id="@+id/blue" android:title="Blue" />
+    <item android:id="@+id/yellow" android:title="Yellow" />
+
+</menu>
+
+<!-- Layout -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relLayout"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context="com.abanoubhanna.myapp.MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Background Color"
+        android:onClick="changeBackground"/>
+
+</RelativeLayout>

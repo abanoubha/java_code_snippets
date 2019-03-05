@@ -1,1 +1,51 @@
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:padding=\"16dp\"\n    android:background=\"@color/white\"\n    tools:context=\"com.hussainlabs.myapplication.MainActivity\">\n\n\n    <Spinner\n        android:id=\"@+id/spinner\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_below=\"@id/textView1\"\n        android:layout_marginStart=\"10dp\"/>\n\n    <TextView\n        android:id=\"@+id/textView1\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginBottom=\"10dp\"\n        android:textStyle=\"bold\"\n        android:text=\"Choose a country:\"\n        android:textColor=\"@color/black\"/>\n\n    <TextView\n        android:id=\"@+id/textView2\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_below=\"@id/spinner\"\n        android:layout_marginTop=\"20dp\"\n        android:text=\"Capital: \"\n        android:textStyle=\"bold\"\n        android:textColor=\"@color/black\"/>\n\n\n    <TextView\n        android:id=\"@+id/capital\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_toRightOf=\"@id/textView2\"\n        android:layout_below=\"@id/spinner\"\n        android:layout_marginTop=\"20dp\"\n        android:layout_marginStart=\"5dp\"\n        android:textColor=\"@color/black\"/>\n\n</RelativeLayout>\n
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context="com.abanoubhanna.myapp.MainActivity">
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textView1"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:text="Choose a country:"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_marginTop="20dp"
+        android:text="Capital: "
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/capital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView2"
+        android:layout_below="@id/spinner"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>
